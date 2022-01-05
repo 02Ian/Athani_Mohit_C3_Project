@@ -64,7 +64,7 @@ class RestaurantServiceTest {
         restaurant.addToMenu("Sweet corn soup",119);
         restaurant.addToMenu("Vegetable lasagne", 269);
 
-        int initialNumberOfRestaurants = service.getRestaurants().size();
+        int initialNumberOfRestaurants = 0;
         service.addRestaurant("Pumpkin Tales","Mumbai",LocalTime.parse("12:00:00"),LocalTime.parse("23:00:00"));
         assertEquals(initialNumberOfRestaurants + 1,service.getRestaurants().size());
     }
