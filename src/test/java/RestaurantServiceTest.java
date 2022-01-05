@@ -40,9 +40,9 @@ class RestaurantServiceTest {
         restaurant.addToMenu("Sweet corn soup",119);
         restaurant.addToMenu("Vegetable lasagne", 269);
 
-        int inNum = service.getRestaurants().size();
+        int initialNumberOfRestaurants = service.getRestaurants().size();
         service.removeRestaurant("Amelie's cafe");
-        assertEquals(inNum-1, service.getRestaurants().size());
+        assertEquals(initialNumberOfRestaurants-1, service.getRestaurants().size());
     }
 
     @Test
@@ -64,9 +64,9 @@ class RestaurantServiceTest {
         restaurant.addToMenu("Sweet corn soup",119);
         restaurant.addToMenu("Vegetable lasagne", 269);
 
-        int inNum = service.getRestaurants().size();
+        int initialNumberOfRestaurants = service.getRestaurants().size();
         service.addRestaurant("Pumpkin Tales","Chennai",LocalTime.parse("12:00:00"),LocalTime.parse("23:00:00"));
-        assertEquals(inNum + 1,service.getRestaurants().size());
+        assertEquals(initialNumberOfRestaurants + 1,service.getRestaurants().size());
     }
     //<<<<<<<<<<<<<<<<<<<<ADMIN: ADDING & REMOVING RESTAURANTS>>>>>>>>>>>>>>>>>>>>>>>>>>
 }
